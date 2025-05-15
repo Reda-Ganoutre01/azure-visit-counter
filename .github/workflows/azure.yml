@@ -17,7 +17,7 @@ jobs:
         node-version: '22'
 
     - name: Install dependencies
-      run: npm install
+      run: npm install":
 
     - name: Zip content for deployment
       run: |
@@ -27,6 +27,6 @@ jobs:
       uses: azure/webapps-deploy@v3
       with:
         # Remplace par le nom exact de ton App Service
-        app-name: 'VisitCounterApp'
+        app-name: 'visit-count'
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: release.zip
